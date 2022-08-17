@@ -5,26 +5,23 @@ using System.Text;
 namespace Class_Method_Assigment
 {
     public class Class1
+
     {
-        public void Div(int number)
+
+        public void Div(int number, out double result)
         {
-            double result = number / 2.00;
+            result = number / 2.00;
 
             Console.WriteLine("1/2 of {0}" + " is {1}", number, result);
         }
 
-        public double Div2(int number)
+        public void Div(double number, out double dResult)
         {
-            double result = number / 2.00;
+            dResult = number / 2.00;
 
-            return result;
+            Console.WriteLine("1/2 of {0}" + " is {1}", number, dResult);
         }
 
-        public double Div2(int numberOne, int numberTwo)
-        {
-            double result = numberOne / numberTwo;
 
-            return result;
-        }
     }
 }
