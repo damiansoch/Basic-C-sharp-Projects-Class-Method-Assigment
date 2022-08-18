@@ -10,21 +10,24 @@ namespace Class_Method_Assigment
 
             Console.WriteLine("Please enter the whole number");
             int number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter the decimal number (number that consists of a whole number and a fractional part)");
-
-            double dNumber = Convert.ToDouble(Console.ReadLine());
 
             double result;
-            double dResult;
+            int resultM1;
+            int resultM2;
 
             class1.Div(number, out result);
-            class1.Div(dNumber, out dResult);
+            class1.Multi(number, out resultM1);
+            class1.Multi(number, 3, out resultM2);
 
 
-            Console.WriteLine("Result of the function1 = {0}", result);
-            Console.WriteLine("Result of the function2 = {0}", dResult);
+            Console.WriteLine("Result of the method1 (user input / 2) = {0}", result);
+            Console.WriteLine("Result of the method2 (input * 2[default but we can assign different value]))= {0}", resultM1);
+            Console.WriteLine("Result of the method3 (overloaded method to method 2 ) = {0}", resultM2 + "\n");
 
 
+            StaticClass.Write();
+
+            Console.ReadLine();
         }
     }
 }
